@@ -2,7 +2,7 @@
 #define MENU_PRINCIPAL_H_INCLUDED
 
  /// MENU PRINCIPAL
-void menuPrincipal(){
+int menuPrincipal(){
 int opcion = 0;
 
 system("cls");
@@ -12,11 +12,13 @@ cout<<"2 - MODO DOS JUGADORES"<<endl;
 cout<<"3 - ESTADISTICAS"<<endl;
 cout<<"4 - CREDITOS"<<endl;
 cout<<"----------------------"<<endl;
-cout<<"SALIR"<<endl;
+cout<<"0 - SALIR"<<endl;
 cout<<"Opcion: ";
 cin>>opcion;
 
+return opcion;
  }
+
 
 
 

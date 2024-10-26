@@ -10,12 +10,11 @@ int main()
 {
 int const TAM=5,BLOQ=2;
 srand(time(0));
+int opcion;
 int dados[TAM]{},dadosBloq[BLOQ]{};
 char jugador1, jugador2;
 
-menuPrincipal();
-
-
+opcion = menuPrincipal();
 
     return 0;
 }
