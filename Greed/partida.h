@@ -1,0 +1,5 @@
+#ifndef PARTIDA_H_INCLUDED
+#define PARTIDA_H_INCLUDED
+
+
+#endif // PARTIDA_H_INCLUDED
