@@ -1,9 +1,9 @@
 # depslib dependency file v1.0
-1731165838 source:c:\users\sookj\onedrive\documents\github\utn-greed\greed\main.cpp
+1731167554 source:c:\users\sookj\onedrive\documents\github\utn-greed\greed\main.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
 	"menu_principal.h"
 
-1729973036 c:\users\sookj\onedrive\documents\github\utn-greed\greed\menu_principal.h
+1731167606 c:\users\sookj\onedrive\documents\github\utn-greed\greed\menu_principal.h
 

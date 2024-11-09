@@ -17,16 +17,27 @@ opcion = menuPrincipal();
 switch(opcion){
      case 1:
                 /// MODO UN JUGADOR
-                cout<<"INGRESE NOMBRE JUGADOR: ";
+                cout<<endl<<"INGRESE NOMBRE JUGADOR: ";
                 cin >> jugador1;
+                break;
     case 2:
                 /// MODO DOS JUGADORES
-                cout<<"INGRESE NOMBRE JUGADOR 1: ";
+                cout<<endl<<"INGRESE NOMBRE JUGADOR 1: ";
                 cin >> jugador1;
-                cout<<"INGRESE NOMBRE JUGADOR 2: ";
+                cout<<endl<<"INGRESE NOMBRE JUGADOR 2: ";
                 cin >> jugador2;
+               break;
+    case 3:
+                ///ESTADISTICAS
+                break;
+    case 4:
+               ///CREDITOS
+               cout << endl<<"Juego realizado por: "<<endl<<endl;
+               cout << "Caterina Fuster"<<endl;
+               cout << "Sofia Pastor Conde"<<endl;
+               cout << "Ezequiel Boyer"<<endl;
+                break;
 
-                            break;
 }
 
     return 0;
