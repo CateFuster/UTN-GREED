@@ -19,6 +19,8 @@ switch(opcion){
                 /// MODO UN JUGADOR
                 cout<<endl<<"INGRESE NOMBRE JUGADOR: ";
                 cin >> jugador1;
+               // tirarBloq()
+                system("pause");
                 break;
     case 2:
                 /// MODO DOS JUGADORES
@@ -34,8 +36,11 @@ switch(opcion){
                ///CREDITOS
                cout << endl<<"Juego realizado por: "<<endl<<endl;
                cout << "Caterina Fuster"<<endl;
-               cout << "Sofia Pastor Conde"<<endl;
                cout << "Ezequiel Boyer"<<endl;
+               cout << "Sofia Pastor Conde"<<endl;
+                      break;
+     default:
+               cout<<endl<<"OPCION INVALIDA"<<endl;
                 break;
 
 }
