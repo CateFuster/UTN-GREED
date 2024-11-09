@@ -20,6 +20,7 @@ switch(opcion){
                 cout<<endl<<"INGRESE NOMBRE JUGADOR: ";
                 cin >> jugador1;
                // tirarBloq()
+
                 system("pause");
                 break;
     case 2:
