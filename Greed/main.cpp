@@ -3,6 +3,7 @@
 #include <ctime>
 using namespace std;
 #include "menu_principal.h"
+#include "partida.h"
 
 int main()
 {

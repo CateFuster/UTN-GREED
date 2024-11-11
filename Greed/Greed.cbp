@@ -34,6 +34,7 @@
 		</Compiler>
 		<Unit filename="main.cpp" />
 		<Unit filename="menu_principal.h" />
+		<Unit filename="partida.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
