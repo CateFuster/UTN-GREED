@@ -2,15 +2,16 @@
 #include <cstdlib>
 #include <ctime>
 using namespace std;
+
 #include "menu_principal.h"
 #include "partida.h"
 
-int main()
-{
+int main(){
+
 int const TAM=5,BLOQ=2;
 srand(time(0));
 int opcion;
-int dados[TAM]{},dadosBloq[BLOQ]{};
+int dados[TAM]{},dadosBloq[BLOQ]{},vDadosBloq;
 char jugador1, jugador2;
 
 opcion = menuPrincipal();
@@ -21,6 +22,8 @@ switch(opcion){
                 cout<<endl<<"INGRESE NOMBRE JUGADOR: ";
                 cin >> jugador1;
                // tirarBloq()
+
+               tirarBloq ();
 
                 system("pause");
                 break;
@@ -46,6 +49,5 @@ switch(opcion){
                 break;
 
 }
-
-    return 0;
+ return 0;
 }

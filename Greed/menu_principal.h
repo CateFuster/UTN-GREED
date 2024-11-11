@@ -14,6 +14,7 @@ cout<<"4 - CREDITOS"<<endl;
 cout<<"----------------------"<<endl;
 cout<<"0 - SALIR"<<endl<<endl;
 cout<<"Opcion: ";
+
 cin>>opcion;
 
 return opcion;
