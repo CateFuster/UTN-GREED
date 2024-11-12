@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <string>
 using namespace std;
 
 #include "menu_principal.h"
@@ -12,7 +13,7 @@ int const TAM=5,BLOQ=2;
 srand(time(0));
 int opcion;
 int dados[TAM]{},dadosBloq[BLOQ]{},vDadosBloq;
-char jugador1, jugador2;
+string jugador1, jugador2;
 
 opcion = menuPrincipal();
 
@@ -23,7 +24,7 @@ switch(opcion){
                 cin >> jugador1;
                // tirarBloq()
 
-               tirarBloq ();
+               jugar(jugador1, 1);
 
                 system("pause");
                 break;
