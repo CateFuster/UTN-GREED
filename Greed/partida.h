@@ -1,33 +1,17 @@
-#ifndef PARTIDA_H_INCLUDED
-#define PARTIDA_H_INCLUDED
+#pragma once
+#include <string>
 
-void tirarBloq(int *vDadosBloq){
-    srand(time(NULL));
-    for(int i=0; i<6; i++ ){
-       vDadosBloq[i]=(rand()%6)+1;
-    }}
+using namespace std;
 
-void bloqMostrar(int *vDadosBloq){
-    for(int i=0;i<6;i++){
-        cout<<vDadosBloq[i]<<" ";
-    }}
-
-    /// Jugada
+void mostrarNombre(string nombre, int numero);
+int tirarDado();
+void tirarBloq(int vDadosBloq[], int cantidad);
+void bloqMostrar(int vDadosBloq[], int cantidad);
+void tirarDados(int vDados[], int cantidad, int vDadosBloq[]);
+bool validarDado(int dado, int vDadosBloq[], int cantidadBloq);
+bool validarDados(int vDados, int vDadosBloq);
+void jugar(string nombre, int nroJugador);
 
 
-
-    ///Puntos
-
-int sumaDeDados(int *v){
-    int acumulador=0;
-    for(int i=0;i<6;i++){
-                acumulador+=v[i];
-    }
-     return acumulador;
-}
-void verPuntaje(int puntaje){
-    cout<<endl;
-    cout<<"PUNTAJE OBTENIDO: "<<puntaje;
-    cout<<endl;
-}
-#endif // PARTIDA_H_INCLUDED
+int sumaDeDados(int *v);
+void verPuntaje(int puntaje);
