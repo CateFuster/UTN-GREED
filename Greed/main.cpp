@@ -8,15 +8,15 @@ using namespace std;
 
 int main(){
 
-int opcion;
+int opcionElegida;
 char jugador1, jugador2;
 
 
 do{
-   opcion = menuPrincipal();
-   ejecutarOpcion (opcion, jugador1, jugador2);
+   opcionElegida = menuPrincipal();
+   ejecutarOpcion (opcionElegida, jugador1, jugador2);
    }
-    while (opcion != 0);
+    while (opcionElegida != 0);
 
  return 0;
 }
