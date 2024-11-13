@@ -16,6 +16,7 @@ char jugador1, jugador2;
 
 opcion = menuPrincipal();
 
+do{
 switch(opcion){
      case 1:
                 /// MODO UN JUGADOR
@@ -44,10 +45,11 @@ switch(opcion){
                cout << "Ezequiel Boyer"<<endl;
                cout << "Sofia Pastor Conde"<<endl;
                       break;
-     default:
-               cout<<endl<<"OPCION INVALIDA"<<endl;
+     case 0:
+               cout<<"Gracias por jugar GREED.."<<endl;
                 break;
 
 }
- return 0;
+}while(opcion!=0);
+return 0;
 }
