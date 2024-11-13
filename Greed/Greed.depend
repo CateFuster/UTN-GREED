@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1731510322 source:c:\users\sookj\onedrive\documents\github\utn-greed\greed\main.cpp
+1731525943 source:c:\users\sookj\onedrive\documents\github\utn-greed\greed\main.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
 	"menu_principal.h"
 	"partida.h"
 
-1731367029 c:\users\sookj\onedrive\documents\github\utn-greed\greed\menu_principal.h
+1731525910 c:\users\sookj\onedrive\documents\github\utn-greed\greed\menu_principal.h
 
 1731368296 c:\users\sookj\onedrive\documents\github\utn-greed\greed\partida.h
 
