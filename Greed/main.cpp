@@ -11,10 +11,11 @@ int main(){
 int const TAM=5,BLOQ=2;
 srand(time(0));
 int opcion;
-int dados[TAM]{},dadosBloq[BLOQ]{},vDadosBloq;
+int dados[TAM]{},dadosBloq[BLOQ]{};
 char jugador1, jugador2;
 
-opcion = menuPrincipal();
+do{
+   opcion = menuPrincipal();
 
 switch(opcion){
      case 1:
@@ -23,7 +24,7 @@ switch(opcion){
                 cin >> jugador1;
                // tirarBloq()
 
-               tirarBloq ();
+
 
                 system("pause");
                 break;
@@ -44,10 +45,15 @@ switch(opcion){
                cout << "Ezequiel Boyer"<<endl;
                cout << "Sofia Pastor Conde"<<endl;
                       break;
-     default:
-               cout<<endl<<"OPCION INVALIDA"<<endl;
-                break;
+    case 0:
+        ///CIERRE JUEGO
+        cout << "Gracias por participar"<<endl;
 
-}
+    default:
+        cout << "Opción inválida"<<endl;
+
+}}
+    while (opcion != 0);
+
  return 0;
 }
