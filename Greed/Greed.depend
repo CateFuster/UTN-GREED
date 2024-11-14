@@ -1,9 +1,27 @@
 # depslib dependency file v1.0
-1731169343 source:c:\users\sookj\onedrive\documents\github\utn-greed\greed\main.cpp
+140727888172650 <<<<<<< Updated upstream
+
+1731587723 source:c:\users\sookj\onedrive\documents\github\utn-greed\greed\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<string>
+	"menu_principal.h"
+	"partida.h"
+
+1731586007 shed changes
 	<iostream>
 	<cstdlib>
 	<ctime>
 	"menu_principal.h"
 
-1731167606 c:\users\sookj\onedrive\documents\github\utn-greed\greed\menu_principal.h
+1731585819 ated upstream
+
+1731587834 c:\users\sookj\onedrive\documents\github\utn-greed\greed\menu_principal.h
+
+1731587942 c:\users\sookj\onedrive\documents\github\utn-greed\greed\partida.h
+
+1731587723 source:c:\users\sookj\onedrive\documents\github\utn-greed\greed\menu_principal.cpp
+	<iostream>
+	"menu_principal.h"
 

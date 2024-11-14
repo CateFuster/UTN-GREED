@@ -1,7 +1,4 @@
 #pragma once
-#include <string>
-
-using namespace std;
 
 void mostrarNombre(string nombre, int numero);
 int tirarDado();
@@ -11,7 +8,6 @@ void tirarDados(int vDados[], int cantidad, int vDadosBloq[]);
 bool validarDado(int dado, int vDadosBloq[], int cantidadBloq);
 bool validarDados(int vDados, int vDadosBloq);
 void jugar(string nombre, int nroJugador);
-
-
 int sumaDeDados(int *v);
 void verPuntaje(int puntaje);
+

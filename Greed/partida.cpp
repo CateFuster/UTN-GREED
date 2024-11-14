@@ -1,8 +1,9 @@
 #include <iostream>
 #include <string>
-#include "partida.h"
 
 using namespace std;
+
+#include "partida.h"
 
 void mostrarNombre(string nombre, int numero){
     cout << "Jugador #" << numero << " - " << nombre;
