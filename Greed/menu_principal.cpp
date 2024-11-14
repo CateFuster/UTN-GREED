@@ -22,36 +22,37 @@ int menuPrincipal(){
 
     return opcion;
  }
-void ejecutarOpcion(int opcion, string jugador1, string jugador2){
- switch(opcion){
+void ejecutarOpcion(int opcion){
+
+   switch(opcion){
      case 1:
                 /// MODO UN JUGADOR
-                cout<<endl<<"INGRESE NOMBRE JUGADOR: ";
-                cin >> jugador1;
-               // tirarBloq()
 
-                system("pause");
-                break;
+
+                             break;
     case 2:
                 /// MODO DOS JUGADORES
-                cout<<endl<<"INGRESE NOMBRE JUGADOR 1: ";
-                cin >> jugador1;
-                cout<<endl<<"INGRESE NOMBRE JUGADOR 2: ";
-                cin >> jugador2;
+
+
                break;
     case 3:
                 ///ESTADISTICAS
+
                 break;
     case 4:
-               ///CREDITOS
-               cout << endl<<"Juego realizado por: "<<endl<<endl;
-               cout << "Caterina Fuster"<<endl;
-               cout << "Ezequiel Boyer"<<endl;
-               cout << "Sofia Pastor Conde"<<endl;
-                      break;
+        ///CREDITOS (no se ven no se por que)
+        cout<<"Juego realizado por el equipo... "<<endl<<endl;
+        cout<<"Integrantes: "<<endl<<endl;
+        cout<<"Caterina Fuster"<<endl;
+        cout<<"Ezequiel Boyer"<<endl;
+        cout<<"Sofia Pastor Conde"<<endl;
+
+
+               break;
+
     case 0:
         ///CIERRE JUEGO
-        cout << "Gracias por utilizar nuestro juego"<<endl;
+        cout << "Gracias por utilizar nuestro juego!"<<endl;
         break;
 
     default:
@@ -59,7 +60,6 @@ void ejecutarOpcion(int opcion, string jugador1, string jugador2){
         break;
 
 }
- }
 
-
+}
 

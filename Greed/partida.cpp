@@ -1,12 +1,24 @@
 #include <iostream>
 #include <string>
 
+
 using namespace std;
 
 #include "partida.h"
 
+void solicitarNombreJugador(){
+    cout<<"INGRESE SU NOMBRE";
+}
+
+void cargarNombre(string jugador[], int tam, int jug){
+      int i;
+    for(int j=0; j<=jug; j++){
+        solicitarNombreJugador();
+    }
+}
+
 void mostrarNombre(string nombre, int numero){
-    cout << "Jugador #" << numero << " - " << nombre;
+    cout << "Jugador: "<<nombre;
     cout << endl << "-------------------------" << endl;
 }
 
@@ -79,8 +91,6 @@ void jugar(string nombre, int nroJugador){
 
     }
 }
-
-
 
     ///Puntos
 

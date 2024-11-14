@@ -1,5 +1,6 @@
 #pragma once
 
+void solicitarNombreJugador();
 void mostrarNombre(string nombre, int numero);
 int tirarDado();
 void tirarBloq(int vDadosBloq[], int cantidad);

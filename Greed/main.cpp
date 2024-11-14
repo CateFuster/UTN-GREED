@@ -10,20 +10,27 @@ using namespace std;
 
 int main(){
 
-int const TAM=5,BLOQ=2;
-srand(time(0));
 int opcionElegida;
-int dados[TAM]{},dadosBloq[BLOQ]{},vDadosBloq;
-string jugador1, jugador2;
-
-opcionElegida = menuPrincipal();
+srand(time(0));
 
 do{
     system("cls");
+
    opcionElegida = menuPrincipal();
-   ejecutarOpcion (opcionElegida, jugador1, jugador2);
-   }
+
+   system("cls");
+
+   ejecutarOpcion (opcionElegida);
+
+   cout <<endl<<"Presione una tecla para continuar"<<endl;
+
+   system("pause>nul");
+
+           }
     while (opcionElegida != 0);
+
+
+
 
    return 0;
 }
