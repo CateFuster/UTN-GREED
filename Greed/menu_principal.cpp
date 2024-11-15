@@ -1,8 +1,10 @@
 #include <iostream>
+#include "partida.h"
+#include "menu_principal.h"
 
 using namespace std;
 
-#include "menu_principal.h"
+
 
  /// MENU PRINCIPAL
 int menuPrincipal(){
@@ -22,42 +24,50 @@ int menuPrincipal(){
 
     return opcion;
  }
-void ejecutarOpcion(int opcion){
+void ejecutarOpcion(int opcion,string jugador1, string jugador2){
 
    switch(opcion){
      case 1:
-                /// MODO UN JUGADOR
+            /// MODO UN JUGADOR
+            cout<<endl<<"INGRESE NOMBRE JUGADOR: ";
+            cin >> jugador1;
 
+            jugar(jugador1,1);
 
-                             break;
+            break;
     case 2:
-                /// MODO DOS JUGADORES
+            /// MODO DOS JUGADORES
+            cout<<endl<<"INGRESE NOMBRE JUGADOR 1: ";
+            cin >> jugador1;
+            cout<<endl<<"INGRESE NOMBRE JUGADOR 2: ";
+            cin >> jugador2;
 
-
-               break;
+            break;
     case 3:
-                ///ESTADISTICAS
+            ///ESTADISTICAS
 
-                break;
+            break;
     case 4:
-        ///CREDITOS (no se ven no se por que)
-        cout<<"Juego realizado por el equipo... "<<endl<<endl;
-        cout<<"Integrantes: "<<endl<<endl;
-        cout<<"Caterina Fuster"<<endl;
-        cout<<"Ezequiel Boyer"<<endl;
-        cout<<"Sofia Pastor Conde"<<endl;
+            ///CREDITOS (no se ven no se por que)
+            cout<<"Juego realizado por el equipo... "<<endl<<endl;
+            cout<<"Integrantes: "<<endl<<endl;
+            cout<<"Caterina Fuster"<<endl;
+            cout<<"Ezequiel Boyer"<<endl;
+            cout<<"Sofia Pastor Conde"<<endl;
 
-
-               break;
+            break;
 
     case 0:
-        ///CIERRE JUEGO
-        cout << "Gracias por utilizar nuestro juego!"<<endl;
-        break;
+            ///CIERRE JUEGO
+            cout << "Gracias por utilizar nuestro juego!"<<endl;
+
+            //system("pause");
+            break;
 
     default:
-        cout << "Opción inválida"<<endl;
-        break;
+            cout << "Opción inválida"<<endl;
+
+            break;
 
 }
 
