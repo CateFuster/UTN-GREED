@@ -44,9 +44,17 @@ void tirarDados(int vDados[], int cantidad, int vDadosBloq[]){
     int dado;
     for (int i=0; i<cantidad; i++){
         dado = tirarDado();
-        if (validarDado(dado, vDadosBloq,2)){
+        vDados[i]=dado;
+        //if (validarDado(dado, vDadosBloq,2)){
 
-        }
+
+    }
+}
+
+void mostrarDados(int vDados[], int cantidad){
+    cout << "DADOS JUGADOS: ";
+    for(int i=0;i<cantidad;i++){
+        cout<<vDados[i]<<" ";
     }
 }
 
@@ -72,22 +80,29 @@ bool validarDados(int vDados[], int vDadosBloq[]){
 void jugar(string nombre, int nroJugador){
 
     bool continuarJugando = true;
+    char continuar;
     int dados[5], bloqueadores[2], nroLanzamiento=1, puntosJugada, puntosTotal;
 
     mostrarNombre(nombre, nroJugador);
     tirarBloq(bloqueadores, 2);
     bloqMostrar(bloqueadores, 2);
 
-    while (continuarJugando == true) {
+    while (continuarJugando) {
         cout << "#" << nroLanzamiento << "   ";
         tirarDados(dados,5,bloqueadores);
+        mostrarDados(dados,5);
+        cout << "¿Seguir jugando s/n? ";
+        cin >> continuar;
+        if (continuar == 'n'){
+            continuarJugando = false;
+        }
         /// mostrar dados sin cambiar los dados que salgan bloqueados
 
         nroLanzamiento++;
 
-        cout << endl << "Presione cualquier tecla para continuar ...";
-        system("pause>nul");
-        cout << endl;
+        //cout << endl << "Presione cualquier tecla para continuar ...";
+        //system("pause>nul");
+        //cout << endl;
 
     }
 }
