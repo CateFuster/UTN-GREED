@@ -9,28 +9,25 @@ using namespace std;
 
 
 int main(){
+    int opcionElegida;
+    string jugador1, jugador2;
+    srand(time(0));
 
-int opcionElegida;
-srand(time(0));
+    do{
+        system("cls");
 
-do{
-    system("cls");
+        opcionElegida = menuPrincipal();
 
-   opcionElegida = menuPrincipal();
+        system("cls");
 
-   system("cls");
+        ejecutarOpcion (opcionElegida,jugador1,jugador2);
 
-   ejecutarOpcion (opcionElegida);
+        cout <<endl<<"Presione una tecla para continuar"<<endl;
 
-   cout <<endl<<"Presione una tecla para continuar"<<endl;
+        system("pause>nul");
 
-   system("pause>nul");
-
-           }
-    while (opcionElegida != 0);
-
+    } while (opcionElegida != 0);
 
 
-
-   return 0;
+    return 0;
 }
