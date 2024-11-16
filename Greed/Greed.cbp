@@ -33,8 +33,11 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="main.cpp" />
+		<Unit filename="menu_principal.cpp" />
 		<Unit filename="menu_principal.h" />
+		<Unit filename="partida.cpp" />
 		<Unit filename="partida.h" />
+		<Unit filename="rlutil.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

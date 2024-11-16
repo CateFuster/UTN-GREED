@@ -10,7 +10,6 @@ using namespace std;
 int menuPrincipal(){
     int opcion = 0;
 
-    system("cls");
     cout<<"----MENU PRINCIPAL----"<<endl;
     cout<<"1 - MODO UN JUGADOR"<<endl;
     cout<<"2 - MODO DOS JUGADORES"<<endl;
@@ -24,7 +23,15 @@ int menuPrincipal(){
 
     return opcion;
  }
+<<<<<<< Updated upstream
 void ejecutarOpcion(int opcion,string jugador1, string jugador2){
+=======
+
+ void estadisticas(int estadisticasGanador, int estadisticasRondas){
+  cout << "El mayor puntaje lo obtuvo el jugador # " << estadisticasGanador<< endl;
+}
+void ejecutarOpcion(int opcion,string jugador1, string jugador2, int &estadisticasGanador, int &estadisticasRondas){
+>>>>>>> Stashed changes
 
    switch(opcion){
      case 1:
@@ -32,7 +39,11 @@ void ejecutarOpcion(int opcion,string jugador1, string jugador2){
             cout<<endl<<"INGRESE NOMBRE JUGADOR: ";
             cin >> jugador1;
 
+<<<<<<< Updated upstream
             jugar(jugador1,1);
+=======
+            unJugador(jugador1, 1);
+>>>>>>> Stashed changes
 
             break;
     case 2:
@@ -41,10 +52,18 @@ void ejecutarOpcion(int opcion,string jugador1, string jugador2){
             cin >> jugador1;
             cout<<endl<<"INGRESE NOMBRE JUGADOR 2: ";
             cin >> jugador2;
+<<<<<<< Updated upstream
+=======
+            dosJugadores (jugador1, jugador2);
+>>>>>>> Stashed changes
 
             break;
     case 3:
             ///ESTADISTICAS
+<<<<<<< Updated upstream
+=======
+            estadisticas(estadisticasGanador, estadisticasRondas);
+>>>>>>> Stashed changes
 
             break;
     case 4:
