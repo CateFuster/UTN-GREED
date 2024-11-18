@@ -1,0 +1,51 @@
+#pragma once
+
+//FUNCIONES
+void cargarBloqueadores(int bloqueadores[]);
+void mostrarBloqueadores (int bloqueadores[]);
+void cargarDados(int vecDados[]);
+void mostrarDados(int vecDados[]);
+void compararDadosYBloqueadores(int vecDados[], int bloqueadores[], int dadosBloqueados);
+void reiniciarVector(int vecDados[]);
+bool todosLosDadosBloqueados(int dadosBloqueados);
+
+//DEFINICION DE FUNCIONES
+
+void cargarBloqueadores(int bloqueadores[]){
+for(int i=0;i<2;i++){
+    bloqueadores[i]=rand()%6+1;
+}}
+
+void mostrarBloqueadores (int bloqueadores[]){
+cout<<"------------------"<<endl;
+cout<<"Bloqueadores: ";
+for(int i=0;i<2;i++){
+    cout<<bloqueadores[i]<<" ";
+}
+cout<<endl<<"------------------"<<endl;
+}
+
+void cargarDados(int vecDados[]){
+for(int i=0;i<5;i++){
+if(vecDados[i]!=-1){
+    vecDados[i]=rand()%6+1;
+    }}}
+
+void mostrarDados(int vecDados[]){
+cout<<"Dados: ";
+for(int i=0;i<5;i++){
+    if(vecDados[i]!=-1){
+    cout<<vecDados[i]<<" ";
+}}}
+
+void compararDadosYBloqueadores(int vecDados[], int bloqueadores[], int dadosBloqueados){
+for(int i=0;i<5;i++){
+    if(vecDados[i]==bloqueadores[0] || vecDados[i]==bloqueadores[1]){
+        vecDados[i]=-1;
+        dadosBloqueados++;
+    }}}
+
+void reiniciarVector(int vecDados[]){
+for(int i=0;i<5;i++){
+    vecDados[i]=0;
+}}
