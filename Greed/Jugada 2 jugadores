@@ -1,0 +1,92 @@
+#include<iostream>
+using namespace std;
+#include<cstdlib>
+#include "time.h"
+#include "headers.h"
+
+int main(){
+srand(time(0));
+int dados1[5], dados2[5], bloqueadores[2];
+int dadosBloqueados=0, puntosRonda1, puntosRonda2, acuPuntos1=0, acuPuntos2=0, ronda=0;
+string jugador1, jugador2, jugador;
+char seguirTirando,s, S, n, N;
+bool cantidadDadosBloqueados;
+
+
+cout<<"Indique jugador #1: ";
+cin>>jugador1;
+cout<<"Indique jugador #2: ";
+cin>>jugador2;
+cout<<endl;
+
+for(int i=0;i<3;i++){
+system("cls");
+int tirada1=0, tirada2=0;
+ronda++;
+bool todosDadosBloqueados=false;
+cout<<"Ronda #"<<ronda<<endl;
+
+//CARGAR BLOQUEADORES
+cargarBloqueadores(bloqueadores);
+//MOSTRAR BLOQUEADORES
+mostrarBloqueadores(bloqueadores);
+
+//JUGADOR 1
+jugador=jugador1;
+while(jugador==jugador1){
+tirada1++;
+cout<<"Tirada "<<tirada1<<" de "<<jugador<<endl;
+//CARGAR VECTOR DE DADOS JUGADOR 1
+cargarDados(dados1);
+//MOSTRAR LOS DADOS TIRADOS
+mostrarDados(dados1);
+//COMPARAR DADOS
+compararDadosYBloqueadores(dados1, bloqueadores, dadosBloqueados);
+
+cout<<"  Seguir tirando? (N/S): ";
+cin>>seguirTirando;
+
+if(seguirTirando=='s' || seguirTirando=='S'){
+    jugador=jugador1;
+}
+if(seguirTirando=='n' || seguirTirando=='N'){
+    system("cls");
+    jugador=jugador2;
+}}
+
+cout<<"RONDA #"<<i+1<<endl;
+mostrarBloqueadores(bloqueadores);
+
+//JUGADOR 2
+while(jugador==jugador2){
+//cout<<"Ronda #"<<ronda<<endl;
+tirada2++;
+cout<<"Tirada "<<tirada2<<" de "<<jugador<<endl;
+//CARGAR VECTOR DE DADOS JUGADOR 2
+cargarDados(dados2);
+//MOSTRAR LOS DADOS TIRADOS
+mostrarDados(dados2);
+//COMPARAR DADOS
+compararDadosYBloqueadores(dados2, bloqueadores, dadosBloqueados);
+
+
+cout<<"  Seguir tirando? (N/S): ";
+cin>>seguirTirando;
+
+if(seguirTirando=='s' || seguirTirando=='S'){
+    jugador=jugador2;
+}
+if(seguirTirando=='n' || seguirTirando=='N'){
+    system("cls");
+    jugador=jugador1;
+}
+
+
+}
+reiniciarVector(dados1);
+reiniciarVector(dados2);
+}
+
+
+return 0;
+}
