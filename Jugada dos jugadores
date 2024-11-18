@@ -1,0 +1,119 @@
+#include<iostream>
+using namespace std;
+#include<cstdlib>
+#include "time.h"
+#include "headers.h"
+
+int main(){
+srand(time(0));
+int dados1[5], dados2[5], bloqueadores[2];
+int dadosBloqueados=5, puntosRonda1=0, puntosRonda2=0, ronda=0;
+string jugador1, jugador2, jugador;
+char seguirTirando,s, S, n, N;
+
+cout<<"Indique jugador #1: ";
+cin>>jugador1;
+cout<<"Indique jugador #2: ";
+cin>>jugador2;
+cout<<endl;
+
+for(int i=0;i<3;i++){
+system("cls");
+int tirada1=0, tirada2=0;
+ronda++;
+
+//CARGAR BLOQUEADORES
+cargarBloqueadores(bloqueadores);
+
+//JUGADOR 1
+jugador=jugador1;
+while(jugador==jugador1){
+system("cls");
+cout<<"Ronda #"<<ronda<<endl;
+tirada1++;
+cout<<"Tirada "<<tirada1<<" de "<<jugador<<endl;
+mostrarBloqueadores(bloqueadores);
+//CARGAR VECTOR DE DADOS JUGADOR 1
+cargarDados(dados1);
+//MOSTRAR LOS DADOS TIRADOS
+mostrarDados(dados1);
+//COMPARAR DADOS
+compararDadosYBloqueadores(dados1, bloqueadores, dadosBloqueados);
+//ACUMULAR PUNTOS POR RONDA
+
+cout<<endl<<endl;
+if(dadosBloqueados==0){
+    cout<<"Perdiste todos los dados"<<endl;
+    jugador=jugador2;
+    //system("cls");
+}
+
+cout<<"Seguir tirando? (N/S): ";
+cin>>seguirTirando;
+
+if(seguirTirando=='s' || seguirTirando=='S'){
+    jugador=jugador1;
+    //system("pause");
+    //system("cls");
+}
+if(seguirTirando=='n' || seguirTirando=='N'){
+    system("cls");
+    jugador=jugador2;
+    //system("pause");
+    //system("cls");
+}
+puntosRonda1=sumarPuntos(dados1);
+}
+
+
+//JUGADOR 2
+while(jugador==jugador2){
+system("cls");
+cout<<"Ronda #"<<ronda<<endl;
+tirada2++;
+cout<<"Tirada "<<tirada2<<" de "<<jugador<<endl;
+mostrarBloqueadores(bloqueadores);
+//CARGAR VECTOR DE DADOS JUGADOR 2
+cargarDados(dados2);
+//MOSTRAR LOS DADOS TIRADOS
+mostrarDados(dados2);
+//COMPARAR DADOS
+compararDadosYBloqueadores(dados2, bloqueadores, dadosBloqueados);
+//ACUMULAR PUNTOS POR RONDA
+
+cout<<endl<<endl;
+if(dadosBloqueados==0){
+    cout<<"Perdiste todos los dados"<<endl;
+    jugador=jugador1;
+    //system("cls");
+}
+
+
+cout<<"Seguir tirando? (N/S): ";
+cin>>seguirTirando;
+
+if(seguirTirando=='s' || seguirTirando=='S'){
+    jugador=jugador2;
+    //system("pause");
+    //system("cls");
+}
+if(seguirTirando=='n' || seguirTirando=='N'){
+    system("cls");
+    jugador=jugador1;
+    //system("pause");
+    //system("cls");
+}
+puntosRonda2=sumarPuntos(dados2);
+}
+system("pause");
+
+cout<<"Puntos ronda #"<<i+1<<" "<<jugador1<<": "<<puntosRonda1<<endl;
+cout<<"Puntos ronda #"<<i+1<<" "<<jugador2<<": "<<puntosRonda2<<endl;
+
+reiniciarVector(dados1);
+reiniciarVector(dados2);
+}
+
+
+return 0;
+}
