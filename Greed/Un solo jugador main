@@ -1,0 +1,41 @@
+int main(){
+srand(time(0));
+int dados1[5], bloqueadores[2];
+int dadosBloqueados=0, puntosRonda1, puntosRonda2, acuPuntos1=0, acuPuntos2=0, ronda=0;
+string jugador1;
+char seguirTirando,s, S, n, N;
+
+cout<<"Indique el nombre del jugador: ";
+cin>>jugador1;
+
+for(int i=0;i<3;i++){
+int tirada=0;
+cout<<"RONDA #"<<i+1<<endl;
+
+//CARGAR BLOQUEADORES
+cargarBloqueadores(bloqueadores);
+//MOSTRAR BLOQUEADORES
+mostrarBloqueadores(bloqueadores);
+
+do{
+tirada++;
+cout<<"Tirada "<<tirada<<" de "<<jugador1<<endl;
+//CARGAR VECTOR DE DADOS JUGADOR 1
+cargarDados(dados1);
+//MOSTRAR LOS DADOS TIRADOS
+mostrarDados(dados1);
+//COMPARAR DADOS
+compararDadosYBloqueadores(dados1, bloqueadores, dadosBloqueados);
+
+
+cout<<"  Seguir tirando? (N/S): ";
+
+cin>>seguirTirando;
+}while(seguirTirando=='s' || seguirTirando=='S');
+
+reiniciarVector(dados1);
+system("cls");
+}
+
+return 0;
+}
